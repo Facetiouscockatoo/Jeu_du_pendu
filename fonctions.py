@@ -9,7 +9,7 @@ import random
 mots_possibles = open("dictionnaire",'r').readlines()
 
 def choix_du_mot():
-    i = random.randint(0,len(mots_possibles))
+    i = random.randint(0,len(mots_possibles)-1)
 
     mot_a_trouver=mots_possibles[i]
     return mot_a_trouver
@@ -22,9 +22,10 @@ def mot_complet(mot):
         return True
     
 def lettre(caractere,liste_temporaire,mot_a_trouver):
+    k = 0
+    
     if caractere in liste_temporaire:
-        raise ValueError("Lettre déjà là")
-    k=0
+
     for i in range(len(mot_a_trouver)):
         if caractere == mot_a_trouver[i]:
             liste_temporaire[i] = caractere

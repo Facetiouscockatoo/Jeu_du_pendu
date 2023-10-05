@@ -1,4 +1,4 @@
-import fonctions
+
 from fonctions import *
 
 def pendu_console():
@@ -14,12 +14,14 @@ def pendu_console():
     print(liste_temporaire)
     n = 8
     mot_trouve = False
-    while n > 0 and not mot_trouve:
+    while n > 0 and (not mot_trouve):
         proposition = input("Tentez quelque chose ! ")
         if len(proposition) > 1:
             if mot_complet(proposition):
                 mot_trouve = True
         else:
+            try lettre(proposition,liste_temporaire,mot_a_trouver)
+            with 
             if not lettre(proposition,liste_temporaire,mot_a_trouver):
                 n-=1
             else:
@@ -31,4 +33,4 @@ def pendu_console():
     return mot_trouve
                  
 
-
+pendu_console()
