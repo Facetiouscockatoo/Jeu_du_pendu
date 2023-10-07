@@ -1,7 +1,7 @@
 #header 
 """
 Propriétaires: JEUNET Florian, VILLEMINOT Benoit
-Reste à faire: tout
+Reste à faire: Plus rien !
 Fonctions nécesaires au déroulement d'un jeu du pendu  
 """
 import random
@@ -36,5 +36,3 @@ def lettre(caractere,liste_temporaire,mot_a_trouver):
             k+=1
 
     return k
-    
-print(choix_du_mot())
