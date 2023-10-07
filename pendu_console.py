@@ -1,5 +1,7 @@
 
-from fonctions import *
+from fonctions import choix_du_mot
+from fonctions import lettre
+from fonctions import mot_complet
 
 def pendu_console():
     mot_a_trouver = choix_du_mot()
@@ -10,8 +12,9 @@ def pendu_console():
             liste_temporaire.append(premiere_lettre)
         else:
             liste_temporaire.append("_")
-    liste_temporaire.pop()
+    
     print(liste_temporaire)
+    print(mot_a_trouver)
     n = 8
     mot_trouve = False
     while n > 0 and (not mot_trouve):
@@ -19,16 +22,20 @@ def pendu_console():
         if len(proposition) > 1:
             if mot_complet(proposition):
                 mot_trouve = True
+                return mot_trouve
         else:
-            try lettre(proposition,liste_temporaire,mot_a_trouver)
-            with 
-            if not lettre(proposition,liste_temporaire,mot_a_trouver):
+            
+            
+            if lettre(proposition,liste_temporaire,mot_a_trouver) == 1:
                 n-=1
+            if lettre(proposition,liste_temporaire,mot_a_trouver) == 0:
+                pass
             else:
                 if liste_temporaire == mot_a_trouver:
                     mot_trouve = True
+                    return mot_trouve
         
-        print(liste_temporaire)
+        print(liste_temporaire,n)
     
     return mot_trouve
                  

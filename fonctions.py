@@ -37,6 +37,4 @@ def lettre(caractere,liste_temporaire,mot_a_trouver):
 
     return k
     
-
-
-
+print(choix_du_mot())
